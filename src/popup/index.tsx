@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   chrome.tabs.query(queryInfo, function(tabs) {
     chrome.storage.sync.get(
-      { customFormat: "[${title}](${url})" },
+      { customFormat: "- [ ] [${title}](${url})" },
       async function(options) {
         const tab = tabs[0];
         // Encode (, ), [, ]

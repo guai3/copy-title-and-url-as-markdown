@@ -10,7 +10,7 @@ export const Options: React.FC = () => {
   useEffect(() => {
     chrome.storage.local.get(
       {
-        format: "[${title}](${url})"
+        format: "- [ ] [${title}](${url})"
       },
       (savedOptions: { format: string }) => {
         setOptions(savedOptions);
